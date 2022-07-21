@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const root = document.getElementById("root");
+        let counter = 0;
+        const Container = () => (
+            <div>
+                <h3>Total clicks: {counter}</h3>
+                <button onClick={countUp}>Click me</button>
+            </div>
+        );
+        render();
+
+        // 바뀔 때마다 render() 해줘야함. 깜빡하면 반영 안 됨. 불편
+        function countUp (){
+            counter++;
+            render();
+        }
+        function render() {
+            ReactDOM.render(<Container />, root);
+        }
+    </script>
+</html>
