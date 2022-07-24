@@ -5,7 +5,7 @@ const Fatehr = styled.div`
 `;
 
 const Box = styled.div`
-  backgroundColor: ${(props) => props.bgColor};
+  background-color: ${(props) => props.bgColor};
   width: 100px;
   height: 100px;
 `;
