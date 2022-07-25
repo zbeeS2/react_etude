@@ -108,7 +108,7 @@ const BoxAnime3 = styled.div`
   </Wrapper>
 */
 
-// 8. props.<ThemeProvider에서 정의해준 테마 이름>.속성명 으로 테마의 설정값을 적용할 수 있음!
+// 8. props.theme.속성명 으로 테마의 설정값을 적용할 수 있음!
 const Title = styled.h1`
   color: ${ (props) => props.theme.textColor };
 `;
