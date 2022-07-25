@@ -1,11 +1,19 @@
-import Circle from "./Circle";
+import React, { useState } from "react";
+import styled from "styled-components";
+
+const Container = styled.div`
+  background-color: ${props => props.theme.bgColor};
+`;
+
+const H1 = styled.h1`
+  color: ${props => props.theme.textColor};
+`;
 
 function App() {
-  return(
-    <div>
-      <Circle bgColor="teal" borderColor="#6666FF"/>
-      <Circle bgColor="tomato" text="this is test. and this component is tomato."/>
-    </div>
+  return (
+    <Container>
+      <H1>Hello world!</H1>
+    </Container>
   );
 }
 
